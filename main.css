@@ -1,1 +1,33 @@
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
+  \*********************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (1) ***!
+  \*************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+body {
+  background-color: white;
+}
+
+footer {
+  font-size: 1.1rem;
+  padding: 0.2rem;
+  color: white;
+  background-color: rgb(2, 6, 23);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+footer a {
+  color: #ff5145;
+  font-weight: 500;
+}
+footer a:hover {
+  color: #ffbb01;
+}
