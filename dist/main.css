@@ -6,6 +6,9 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (1) ***!
   \*************************************************************************************************************/
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   font-size: 1.1rem;
   padding: 0.2rem;
   color: white;
@@ -22,12 +25,45 @@ footer a:hover {
   color: #428eff;
 }
 
+header {
+  display: flex;
+}
+header:first-child {
+  width: 60px;
+  height: 60px;
+  border: rgb(2, 6, 23) solid 4px;
+  border-radius: 24px;
+  box-shadow: 3px 5px rgb(2, 6, 23);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.board {
+  height: 300px;
+  border: rgb(2, 6, 23) solid 4px;
+  border-radius: 45px;
+  box-shadow: 8px 12px rgb(2, 6, 23);
+  display: grid;
+  grid-template-columns: minmax(300, 1fr);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }

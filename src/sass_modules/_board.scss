@@ -1,0 +1,10 @@
+@use 'variables';
+.board {
+  height: 300px;
+
+  border: variables.$black solid 4px;
+  border-radius: 45px;
+  box-shadow: 8px 12px variables.$black;
+  display: grid;
+  grid-template-columns: minmax(300, 1fr);
+}

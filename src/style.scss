@@ -1,11 +1,17 @@
 @use './sass_modules/variables';
 @use './sass_modules/footer';
+@use './sass_modules/header';
+@use './sass_modules/main';
+@use './sass_modules/board';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: variables.$roboto;
 }
 body {
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
