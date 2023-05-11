@@ -1,0 +1,17 @@
+@use 'variables';
+footer {
+  font-size: 1.1rem;
+  padding: 0.2rem;
+  color: white;
+  background-color: variables.$black;
+  text-align: center;
+  font-family: variables.$roboto;
+  font-weight: 400;
+  a {
+    color: variables.$red;
+    font-weight: 500;
+    &:hover {
+      color: variables.$blue;
+    }
+  }
+}

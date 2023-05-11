@@ -1,11 +1,6 @@
+@use './sass_modules/variables';
+@use './sass_modules/footer';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-
-$roboto: 'Roboto', sans-serif;
-$yellow: #ffbb01;
-$red: #ff5145;
-$orange: #ec7c28;
-$black: rgb(2, 6, 23);
-$blue: #428eff;
 * {
   box-sizing: border-box;
   padding: 0;
@@ -13,21 +8,4 @@ $blue: #428eff;
 }
 body {
   background-color: white;
-}
-
-footer {
-  font-size: 1.1rem;
-  padding: 0.2rem;
-  color: white;
-  background-color: $black;
-  text-align: center;
-  font-family: $roboto;
-  font-weight: 400;
-  a {
-    color: $red;
-    font-weight: 500;
-    &:hover {
-      color: $yellow;
-    }
-  }
 }

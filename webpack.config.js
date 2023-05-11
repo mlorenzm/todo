@@ -13,6 +13,7 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
+
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
