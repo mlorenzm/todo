@@ -8,4 +8,12 @@ main {
   margin-right: 3rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  max-height: 600px;
+}
+@media only screen and (min-width: 1024px) {
+  main {
+    max-width: 900px;
+    margin-left: 510px;
+    // margin-right: 400px;
+  }
 }

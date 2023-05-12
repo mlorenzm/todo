@@ -1,10 +1,48 @@
 @use 'variables';
 .board {
   height: 500px;
-
   border: variables.$black solid 4px;
   border-radius: 45px;
   box-shadow: 8px 12px variables.$black;
   display: grid;
-  grid-template-columns: minmax(300, 1fr);
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'project-title tasks-title'
+    'projects-container tasks-container';
+  overflow: hidden;
+}
+
+.project-title {
+  display: flex;
+  grid-area: project-title;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: variables.$yellow;
+
+  border-right: variables.$black solid 4px;
+  border-bottom: variables.$black solid 4px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.tasks-title {
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: tasks-title;
+  border-bottom: variables.$black solid 4px;
+}
+.tasks-container {
+  grid-area: tasks-container;
+}
+.projects-container {
+  grid-area: projects-container;
+  border-right: variables.$black solid 4px;
+  display: flex;
+  flex-direction: row;
 }
