@@ -1,11 +1,73 @@
 @use 'variables';
 header {
   display: flex;
-  &:first-child {
-    width: 60px;
-    height: 60px;
-    border: variables.$black solid 4px;
-    border-radius: 24px;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.avatar-container {
+  width: 3.75rem;
+  height: 3.75rem;
+  border: variables.$black solid 4px;
+  border-radius: 24px;
+  &:hover {
+    position: relative;
+    top: 0;
+    left: 0;
     box-shadow: 3px 5px variables.$black;
   }
+}
+
+#input-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  flex: 1;
+  height: 2.5rem;
+  border: variables.$black solid 4px;
+  border-radius: 24px;
+  overflow: scroll;
+  &::placeholder {
+    font-weight: 500;
+  }
+  &:focus {
+    outline: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 5px variables.$black;
+  }
+  &:focus + .btn-container {
+    position: relative;
+    visibility: visible;
+  }
+}
+
+.btn-container {
+  margin-left: -1rem;
+  position: absolute;
+  visibility: hidden;
+}
+
+#cancel-btn,
+#project-btn,
+#calendar-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: variables.$black solid 4px;
+  border-radius: 24px;
+  &:hover {
+    box-shadow: 3px 5px variables.$black;
+    cursor: pointer;
+  }
+}
+#cancel-btn:hover {
+  background-color: variables.$red;
+}
+#project-btn:hover {
+  background-color: variables.$orange;
+}
+#calendar-btn:hover {
+  background-color: variables.$blue;
 }
