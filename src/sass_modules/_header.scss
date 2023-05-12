@@ -46,8 +46,8 @@ header {
 
 .btn-container {
   margin-left: -1rem;
-  position: absolute;
-  visibility: hidden;
+  // position: absolute;
+  // visibility: hidden;
 }
 
 #cancel-btn,
@@ -62,6 +62,7 @@ header {
     cursor: pointer;
   }
 }
+
 #cancel-btn:hover {
   background-color: variables.$red;
 }

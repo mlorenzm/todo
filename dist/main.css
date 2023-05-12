@@ -23,6 +23,7 @@ footer a {
 }
 footer a:hover {
   color: #428eff;
+  cursor: pointer;
 }
 
 header {
@@ -73,8 +74,6 @@ header {
 
 .btn-container {
   margin-left: -1rem;
-  position: absolute;
-  visibility: hidden;
 }
 
 #cancel-btn,
