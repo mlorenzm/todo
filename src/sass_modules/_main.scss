@@ -17,3 +17,27 @@ main {
     // margin-right: 400px;
   }
 }
+
+// Utility classes for js
+.task-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: variables.$inner-border;
+  &:hover {
+    cursor: pointer;
+    background-color: variables.$gray;
+    border-bottom: variables.$outer-border;
+  }
+}
+.item-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.complete-btn {
+  margin-right: 1.2rem;
+}

@@ -121,6 +121,31 @@ main {
     margin-left: 510px;
   }
 }
+.task-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: rgb(2, 6, 23) solid 2px;
+}
+.task-item-container:hover {
+  cursor: pointer;
+  background-color: #efefef;
+  border-bottom: rgb(2, 6, 23) solid 4px;
+}
+
+.item-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.complete-btn {
+  margin-right: 1.2rem;
+}
+
 .board {
   height: 500px;
   border: rgb(2, 6, 23) solid 4px;
