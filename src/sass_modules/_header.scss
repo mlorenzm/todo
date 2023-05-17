@@ -56,7 +56,8 @@ form {
 
 #cancel-btn,
 #project-btn,
-#calendar-btn {
+#calendar-btn,
+#important-btn {
   width: 2.5rem;
   height: 2.5rem;
   border: variables.$black solid 4px;
@@ -75,4 +76,7 @@ form {
 }
 #calendar-btn:hover {
   background-color: variables.$blue;
+}
+#important-btn:hover {
+  background-color: variables.$yellow;
 }

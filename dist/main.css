@@ -87,7 +87,8 @@ form {
 
 #cancel-btn,
 #project-btn,
-#calendar-btn {
+#calendar-btn,
+#important-btn {
   width: 2.5rem;
   height: 2.5rem;
   border: rgb(2, 6, 23) solid 4px;
@@ -95,7 +96,8 @@ form {
 }
 #cancel-btn:hover,
 #project-btn:hover,
-#calendar-btn:hover {
+#calendar-btn:hover,
+#important-btn:hover {
   box-shadow: 3px 5px rgb(2, 6, 23);
   cursor: pointer;
 }
@@ -110,6 +112,10 @@ form {
 
 #calendar-btn:hover {
   background-color: #428eff;
+}
+
+#important-btn:hover {
+  background-color: #ffbb01;
 }
 
 main {
@@ -193,6 +199,19 @@ main {
 
 .tasks-container {
   grid-area: tasks-container;
+  overflow-y: scroll;
+}
+.tasks-container::-webkit-scrollbar {
+  width: 7px;
+  background-color: #efefef;
+  cursor: pointer;
+}
+.tasks-container::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 10px;
+}
+.tasks-container::-webkit-scrollbar-thumb:hover {
+  background-color: #aaaaaa;
 }
 
 .projects-container {

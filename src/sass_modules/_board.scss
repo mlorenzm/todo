@@ -39,6 +39,19 @@
 }
 .tasks-container {
   grid-area: tasks-container;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: variables.$gray;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #999999;
+    border-radius: 10px;
+    &:hover {
+      background-color: #aaaaaa;
+    }
+  }
 }
 .projects-container {
   grid-area: projects-container;
