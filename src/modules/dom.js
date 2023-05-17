@@ -11,7 +11,7 @@ const createTaskItemContainer = (item) => {
   const completeBtn = document.createElement('img')
   completeBtn.classList.add('complete-btn')
   completeBtn.src = checkMark
-  completeBtn.width = '30'
+  completeBtn.width = '26'
   completeBtn.title = 'Mark complete'
 
   container.append(title, completeBtn)
