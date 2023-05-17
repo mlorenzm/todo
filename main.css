@@ -47,6 +47,12 @@ header {
   box-shadow: 3px 5px rgb(2, 6, 23);
 }
 
+form {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
 #input-container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -74,7 +80,9 @@ header {
 }
 
 .btn-container {
-  margin-left: -1rem;
+  margin-left: 0rem;
+  position: absolute;
+  visibility: hidden;
 }
 
 #cancel-btn,
