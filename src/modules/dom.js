@@ -1,4 +1,5 @@
 import checkMark from '../assets/checkmark.svg'
+
 const createTaskItemContainer = (item) => {
   const container = document.createElement('div')
   container.classList.add('task-item-container')
@@ -23,4 +24,5 @@ const renderTask = (item) => {
 
   mainContainer.append(taskContainer)
 }
+const markComplete = () => {}
 export { renderTask, createTaskItemContainer }

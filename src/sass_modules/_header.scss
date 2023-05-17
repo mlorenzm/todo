@@ -17,7 +17,11 @@ header {
     box-shadow: 3px 5px variables.$black;
   }
 }
-
+form {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
 #input-container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -45,9 +49,9 @@ header {
 }
 
 .btn-container {
-  margin-left: -1rem;
-  // position: absolute;
-  // visibility: hidden;
+  margin-left: 0rem;
+  position: absolute;
+  visibility: hidden;
 }
 
 #cancel-btn,

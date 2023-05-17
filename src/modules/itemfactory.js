@@ -1,14 +1,14 @@
-function CreateItem(name, description, dueDate, priority, project) {
+function CreateItem(name, description, dueDate, isImportant, project) {
   const getName = () => name
   const getDescription = () => description
   const getDueDate = () => dueDate
-  const getPriotiry = () => priority
+  const getImportance = () => isImportant
   const getProject = () => project
   return {
     getName,
     getDescription,
     getDueDate,
-    getPriotiry,
+    getImportance,
     getProject,
   }
 }
