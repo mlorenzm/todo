@@ -43,15 +43,15 @@ form {
     box-shadow: 3px 5px variables.$black;
   }
   &:focus + .btn-container {
-    position: relative;
     visibility: visible;
+    position: relative;
   }
 }
 
 .btn-container {
   margin-left: 0rem;
-  position: absolute;
-  visibility: hidden;
+  // position: absolute;
+  visibility: visible;
 }
 
 #cancel-btn,
