@@ -1,0 +1,35 @@
+@use 'variables';
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+
+  button {
+    font-size: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 0.5rem 0.25rem;
+    border-bottom: variables.$inner-border;
+    &:hover {
+      background-color: variables.$mid-gray;
+      cursor: pointer;
+    }
+    &:nth-child(2) {
+      border-top: variables.$inner-border;
+    }
+  }
+}
+#add-project-btn {
+  width: auto;
+  border: 0;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(68, 68, 68);
+  &:hover {
+    color: variables.$black;
+    box-shadow: 3px 5px variables.$gray;
+  }
+}

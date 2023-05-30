@@ -1,10 +1,4 @@
-/*!*********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
-  \*********************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap);
-/*!*************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss (1) ***!
-  \*************************************************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 footer {
   position: fixed;
   bottom: 0;
@@ -221,6 +215,40 @@ main {
   flex-direction: row;
 }
 
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+.projects-container button {
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 0.5rem 0.25rem;
+  border-bottom: rgb(2, 6, 23) solid 2px;
+}
+.projects-container button:hover {
+  background-color: #c6c6c6;
+  cursor: pointer;
+}
+.projects-container button:nth-child(2) {
+  border-top: rgb(2, 6, 23) solid 2px;
+}
+
+#add-project-btn {
+  width: auto;
+  border: 0;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(68, 68, 68);
+}
+#add-project-btn:hover {
+  color: rgb(2, 6, 23);
+  box-shadow: 3px 5px #efefef;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -232,3 +260,5 @@ main {
 body {
   background-color: white;
 }
+
+/*# sourceMappingURL=main.css.map */
