@@ -5,8 +5,5 @@ import {
   calendarBtn,
   importantBtn,
 } from './dom.js'
-cancelBtn.addEventListener('click', createTask())
-const createTask = (e) => {
-  e.preventDefault()
-  console.log('a')
-}
+
+// Crea un item con el factory y los parametros (si tiene proyecto, fecha, etc)
