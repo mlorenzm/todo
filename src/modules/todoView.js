@@ -27,21 +27,8 @@ const renderTask = (item) => {
 
   mainContainer.append(taskContainer)
 }
-const markComplete = () => {}
-// General buttons
-const input = document.getElementById('input-container')
-const cancelBtn = document.getElementById('cancel-btn')
-const projectBtn = document.getElementById('project-btn')
-const calendarBtn = document.getElementById('calendar-btn')
-const importantBtn = document.getElementById('important-btn')
-const form = document.getElementById('form')
+
 export {
   renderTask,
   createTaskItemContainer,
-  form,
-  input,
-  cancelBtn,
-  projectBtn,
-  calendarBtn,
-  importantBtn,
 }
