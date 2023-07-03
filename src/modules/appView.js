@@ -27,7 +27,7 @@ const renderTask = (item) => {
 
   mainContainer.append(taskContainer)
 }
-const markComplete = () => {}
+
 // General buttons
 const input = document.getElementById('input-container')
 const cancelBtn = document.getElementById('cancel-btn')
