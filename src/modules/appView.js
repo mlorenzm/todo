@@ -44,7 +44,7 @@ function handleFormSubmit(event) {
   }
 }
 
-const formElement = document.getElementById('input-container')
+const formElement = document.getElementById('form')
 formElement.addEventListener('submit', handleFormSubmit)
 
 export { renderTodoList }

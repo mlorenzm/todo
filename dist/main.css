@@ -78,7 +78,7 @@ form {
   visibility: visible;
 }
 
-#cancel-btn,
+#add-btn,
 #project-btn,
 #calendar-btn,
 #important-btn {
@@ -87,7 +87,7 @@ form {
   border: rgb(2, 6, 23) solid 4px;
   border-radius: 24px;
 }
-#cancel-btn:hover,
+#add-btn:hover,
 #project-btn:hover,
 #calendar-btn:hover,
 #important-btn:hover {
@@ -95,8 +95,8 @@ form {
   cursor: pointer;
 }
 
-#cancel-btn:hover {
-  background-color: #ff5145;
+#add-btn:hover {
+  background-color: #34a853;
 }
 
 #project-btn:hover {

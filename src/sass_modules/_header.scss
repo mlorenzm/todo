@@ -54,7 +54,7 @@ form {
   visibility: visible;
 }
 
-#cancel-btn,
+#add-btn,
 #project-btn,
 #calendar-btn,
 #important-btn {
@@ -68,8 +68,8 @@ form {
   }
 }
 
-#cancel-btn:hover {
-  background-color: variables.$red;
+#add-btn:hover {
+  background-color: variables.$green;
 }
 #project-btn:hover {
   background-color: variables.$orange;
