@@ -20,43 +20,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/style.scss":
-/*!************************!*\
-  !*** ./src/style.scss ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://todo/./src/style.scss?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n/* harmony import */ var _modules_itemfactory_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/itemfactory.js */ \"./src/modules/itemfactory.js\");\n/* harmony import */ var _modules_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/dom */ \"./src/modules/dom.js\");\n\n\n\n\n\nconst item = (0,_modules_itemfactory_js__WEBPACK_IMPORTED_MODULE_1__.CreateItem)('Start with this todo app', '1', '0', 'odin')\nconst item2 = (0,_modules_itemfactory_js__WEBPACK_IMPORTED_MODULE_1__.CreateItem)('Continue with this app', '1', '0', 'odin')\n\n_modules_dom__WEBPACK_IMPORTED_MODULE_2__.form.addEventListener('submit', function (e) {\n  console.log('a')\n  console.dir(e.currentTarget)\n  e.preventDefault()\n})\nconst taskArray = [\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n  item2,\n]\n\nfor (let a of taskArray) {\n  ;(0,_modules_dom__WEBPACK_IMPORTED_MODULE_2__.renderTask)(a)\n}\n\n\n//# sourceURL=webpack://todo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_appController__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/appController */ \"./src/modules/appController.js\");\n/* harmony import */ var _modules_appModel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/appModel */ \"./src/modules/appModel.js\");\n\n\n(0,_modules_appController__WEBPACK_IMPORTED_MODULE_0__.initApp)()\n;(0,_modules_appModel__WEBPACK_IMPORTED_MODULE_1__.getAllTasks)()\n\n\n//# sourceURL=webpack://todo/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/modules/dom.js":
-/*!****************************!*\
-  !*** ./src/modules/dom.js ***!
-  \****************************/
+/***/ "./src/modules/appController.js":
+/*!**************************************!*\
+  !*** ./src/modules/appController.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"calendarBtn\": () => (/* binding */ calendarBtn),\n/* harmony export */   \"cancelBtn\": () => (/* binding */ cancelBtn),\n/* harmony export */   \"createTaskItemContainer\": () => (/* binding */ createTaskItemContainer),\n/* harmony export */   \"form\": () => (/* binding */ form),\n/* harmony export */   \"importantBtn\": () => (/* binding */ importantBtn),\n/* harmony export */   \"input\": () => (/* binding */ input),\n/* harmony export */   \"projectBtn\": () => (/* binding */ projectBtn),\n/* harmony export */   \"renderTask\": () => (/* binding */ renderTask)\n/* harmony export */ });\n/* harmony import */ var _assets_checkmark_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/checkmark.svg */ \"./src/assets/checkmark.svg\");\n\n\nconst createTaskItemContainer = (item) => {\n  const container = document.createElement('div')\n  container.classList.add('task-item-container')\n  container.title = 'Show details'\n  const title = document.createElement('div')\n  title.textContent = item.getName()\n  title.classList.add('item-title')\n  const completeBtn = document.createElement('img')\n  completeBtn.classList.add('complete-btn')\n  completeBtn.src = _assets_checkmark_svg__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  completeBtn.width = '26'\n  completeBtn.title = 'Mark complete'\n\n  completeBtn.addEventListener('click', () => {\n    console.log(item)\n  })\n\n  container.append(title, completeBtn)\n\n  return container\n}\nconst renderTask = (item) => {\n  const mainContainer = document.getElementById('tasks-container')\n  const taskContainer = createTaskItemContainer(item)\n\n  mainContainer.append(taskContainer)\n}\nconst markComplete = () => {}\n// General buttons\nconst input = document.getElementById('input-container')\nconst cancelBtn = document.getElementById('cancel-btn')\nconst projectBtn = document.getElementById('project-btn')\nconst calendarBtn = document.getElementById('calendar-btn')\nconst importantBtn = document.getElementById('important-btn')\nconst form = document.getElementById('form')\n\n\n\n//# sourceURL=webpack://todo/./src/modules/dom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initApp\": () => (/* binding */ initApp)\n/* harmony export */ });\n/* harmony import */ var _appView_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./appView.js */ \"./src/modules/appView.js\");\n\n\n// Initialize the app\nfunction initApp() {\n  (0,_appView_js__WEBPACK_IMPORTED_MODULE_0__.renderTodoList)()\n}\n\n// Export any necessary functions\n\n\n\n//# sourceURL=webpack://todo/./src/modules/appController.js?");
 
 /***/ }),
 
-/***/ "./src/modules/itemfactory.js":
-/*!************************************!*\
-  !*** ./src/modules/itemfactory.js ***!
-  \************************************/
+/***/ "./src/modules/appModel.js":
+/*!*********************************!*\
+  !*** ./src/modules/appModel.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"CreateItem\": () => (/* binding */ CreateItem)\n/* harmony export */ });\nfunction CreateItem(name, dueDate, isImportant, project) {\n  const getName = () => name\n\n  const getDueDate = () => dueDate\n  const getImportance = () => isImportant\n  const getProject = () => project\n  return {\n    getName,\n    getDueDate,\n    getImportance,\n    getProject,\n  }\n}\n\n\n\n\n//# sourceURL=webpack://todo/./src/modules/itemfactory.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addTask\": () => (/* binding */ addTask),\n/* harmony export */   \"deleteTask\": () => (/* binding */ deleteTask),\n/* harmony export */   \"getAllTasks\": () => (/* binding */ getAllTasks)\n/* harmony export */ });\n// Model: it's the main logic for our app. It needs to store tasks and projects, also holds the blueprint to create a task\n\nlet tasks = []\n\nclass Task {\n  constructor(title) {\n    this.title = title\n  }\n}\naddTask('a')\naddTask('b')\n\nfunction addTask(title) {\n  const task = new Task(title)\n  tasks.push(task)\n}\n\n// Delete a task from the tasks array\nfunction deleteTask(index) {\n  tasks.splice(index, 1)\n}\n\n// Retrieve all tasks\nfunction getAllTasks() {\n  return tasks\n}\n\n// Retrieve all projects\n\n// Export the necessary functions or classes\n\n\n\n//# sourceURL=webpack://todo/./src/modules/appModel.js?");
+
+/***/ }),
+
+/***/ "./src/modules/appView.js":
+/*!********************************!*\
+  !*** ./src/modules/appView.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderTodoList\": () => (/* binding */ renderTodoList)\n/* harmony export */ });\n/* harmony import */ var _assets_checkmark_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/checkmark.svg */ \"./src/assets/checkmark.svg\");\n/* harmony import */ var _appModel_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./appModel.js */ \"./src/modules/appModel.js\");\n\n\n\nfunction renderTodoList() {\n  const container = document.getElementById('tasks-container')\n  container.innerHTML = ''\n\n  const tasks = (0,_appModel_js__WEBPACK_IMPORTED_MODULE_1__.getAllTasks)()\n\n  tasks.forEach((task, index) => {\n    const taskElement = document.createElement('li')\n    taskElement.classList.add('task-item-container')\n    taskElement.textContent = task.title\n    console.log(task.title)\n\n    const completeBtn = document.createElement('img')\n    completeBtn.classList.add('complete-btn')\n    completeBtn.src = _assets_checkmark_svg__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n    completeBtn.width = '26'\n    completeBtn.title = 'Mark complete'\n    completeBtn.textContent = 'Delete'\n    completeBtn.addEventListener('click', () => {\n      ;(0,_appModel_js__WEBPACK_IMPORTED_MODULE_1__.deleteTask)(index)\n      renderTodoList()\n    })\n\n    taskElement.appendChild(completeBtn)\n    container.appendChild(taskElement)\n  })\n}\n\nfunction handleFormSubmit(event) {\n  event.preventDefault()\n\n  const titleInput = document.getElementById('input-container')\n\n  const title = titleInput.value\n  console.log(title)\n\n  if (title) {\n    (0,_appModel_js__WEBPACK_IMPORTED_MODULE_1__.addTask)(title)\n    titleInput.value = ''\n    renderTodoList()\n  }\n}\n\nconst formElement = document.getElementById('input-container')\nformElement.addEventListener('submit', handleFormSubmit)\n\n\n\n\n//# sourceURL=webpack://todo/./src/modules/appView.js?");
 
 /***/ })
 
