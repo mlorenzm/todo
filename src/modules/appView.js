@@ -1,5 +1,11 @@
 import checkMark from '../assets/checkmark.svg'
-import { addTask, deleteTask, getAllTasks } from './appModel.js'
+import exclamation from '../assets/exclamation.svg'
+import {
+  addTask,
+  deleteTask,
+  getAllTasks,
+  toggleImportant,
+} from './appModel.js'
 
 function renderTodoList() {
   const container = document.getElementById('tasks-container')
@@ -14,7 +20,8 @@ function renderTodoList() {
     if (task.priority) {
       taskElement.style.backgroundColor = '#ffbb01'
     }
-
+    const buttonsContainer = document.createElement('div')
+    buttonsContainer.classList.add('buttons-container')
     const completeBtn = document.createElement('img')
     completeBtn.classList.add('complete-btn')
     completeBtn.src = checkMark
@@ -26,7 +33,19 @@ function renderTodoList() {
       renderTodoList()
     })
 
-    taskElement.appendChild(completeBtn)
+    const importantBtn = document.createElement('img')
+    importantBtn.classList.add('important-btn')
+    importantBtn.src = exclamation
+    importantBtn.width = 26
+    importantBtn.title = 'Mark as important'
+    importantBtn.addEventListener('click', () => {
+      toggleImportant(index)
+      console.log(getAllTasks())
+      renderTodoList()
+    })
+
+    buttonsContainer.append(importantBtn, completeBtn)
+    taskElement.appendChild(buttonsContainer)
     container.appendChild(taskElement)
   })
 }
@@ -38,7 +57,7 @@ function handleFormSubmit(event) {
   const title = titleInput.value
 
   if (title) {
-    addTask(title, priority)
+    addTask(title)
     titleInput.value = ''
     renderTodoList()
   }

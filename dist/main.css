@@ -141,6 +141,16 @@ main {
   margin-right: 1.2rem;
 }
 
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.important-btn {
+  fill: #ffffff;
+}
+
 .board {
   height: 500px;
   border: rgb(2, 6, 23) solid 4px;

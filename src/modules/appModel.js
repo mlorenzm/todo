@@ -21,6 +21,17 @@ function deleteTask(index) {
   tasks.splice(index, 1)
 }
 
+// Mark task important on the array
+function toggleImportant(index) {
+  let priority = tasks[index].priority
+  console.log(priority)
+  if (priority) {
+    tasks[index].priority = false
+  } else {
+    tasks[index].priority = true
+  }
+}
+
 // Retrieve all tasks
 function getAllTasks() {
   return tasks
@@ -29,4 +40,4 @@ function getAllTasks() {
 // Retrieve all projects
 
 // Export the necessary functions or classes
-export { addTask, deleteTask, getAllTasks }
+export { addTask, deleteTask, getAllTasks, toggleImportant }
