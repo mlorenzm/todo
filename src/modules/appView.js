@@ -11,7 +11,6 @@ function renderTodoList() {
     const taskElement = document.createElement('li')
     taskElement.classList.add('task-item-container')
     taskElement.textContent = task.title
-    console.log(task)
     if (task.priority) {
       taskElement.style.backgroundColor = '#ffbb01'
     }
@@ -39,25 +38,26 @@ function handleFormSubmit(event) {
   const title = titleInput.value
 
   if (title) {
+    let priority = handlePriority()
     addTask(title, priority)
     titleInput.value = ''
-    priority = false
+    handlePriority()
     renderTodoList()
   }
 }
+
 function handlePriority() {
-  const priorityBtn = document.getElementById('important-btn')
   let priority = false
+  const priorityBtn = document.getElementById('important-btn')
   priorityBtn.addEventListener('click', () => {
     priority = !priority
+    console.log(priority)
     if (priority) {
       priorityBtn.classList.add('important-clicked')
       priority = true
-      console.log(priority)
     } else {
       priorityBtn.classList.remove('important-clicked')
       priority = false
-      console.log(priority)
     }
     return priority
   })
