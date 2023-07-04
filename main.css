@@ -111,6 +111,12 @@ form {
   background-color: #ffbb01;
 }
 
+.important-clicked {
+  box-shadow: 3px 5px rgb(2, 6, 23);
+  cursor: pointer;
+  background-color: #ffbb01;
+}
+
 main {
   display: flex;
   flex-direction: column;
