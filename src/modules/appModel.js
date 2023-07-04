@@ -3,15 +3,16 @@
 let tasks = []
 
 class Task {
-  constructor(title) {
+  constructor(title, priority) {
     this.title = title
+    this.priority = priority
   }
 }
-addTask('a')
-addTask('b')
+addTask('a', true)
+addTask('b', false)
 
-function addTask(title) {
-  const task = new Task(title)
+function addTask(title, priority = false) {
+  const task = new Task(title, priority)
   tasks.push(task)
 }
 

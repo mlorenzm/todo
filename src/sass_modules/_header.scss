@@ -80,3 +80,8 @@ form {
 #important-btn:hover {
   background-color: variables.$yellow;
 }
+.important-clicked {
+  box-shadow: 3px 5px variables.$black;
+  cursor: pointer;
+  background-color: variables.$yellow;
+}
