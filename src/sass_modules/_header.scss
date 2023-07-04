@@ -54,10 +54,8 @@ form {
   visibility: visible;
 }
 
-#add-btn,
 #project-btn,
-#calendar-btn,
-#important-btn {
+#calendar-btn {
   width: 2.5rem;
   height: 2.5rem;
   border: variables.$black solid 4px;
@@ -68,20 +66,9 @@ form {
   }
 }
 
-#add-btn:hover {
-  background-color: variables.$green;
-}
 #project-btn:hover {
   background-color: variables.$orange;
 }
 #calendar-btn:hover {
   background-color: variables.$blue;
-}
-#important-btn:hover {
-  background-color: variables.$yellow;
-}
-.important-clicked {
-  box-shadow: 3px 5px variables.$black;
-  cursor: pointer;
-  background-color: variables.$yellow;
 }
