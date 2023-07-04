@@ -78,25 +78,17 @@ form {
   visibility: visible;
 }
 
-#add-btn,
 #project-btn,
-#calendar-btn,
-#important-btn {
+#calendar-btn {
   width: 2.5rem;
   height: 2.5rem;
   border: rgb(2, 6, 23) solid 4px;
   border-radius: 24px;
 }
-#add-btn:hover,
 #project-btn:hover,
-#calendar-btn:hover,
-#important-btn:hover {
+#calendar-btn:hover {
   box-shadow: 3px 5px rgb(2, 6, 23);
   cursor: pointer;
-}
-
-#add-btn:hover {
-  background-color: #34a853;
 }
 
 #project-btn:hover {
@@ -105,16 +97,6 @@ form {
 
 #calendar-btn:hover {
   background-color: #428eff;
-}
-
-#important-btn:hover {
-  background-color: #ffbb01;
-}
-
-.important-clicked {
-  box-shadow: 3px 5px rgb(2, 6, 23);
-  cursor: pointer;
-  background-color: #ffbb01;
 }
 
 main {
