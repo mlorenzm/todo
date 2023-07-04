@@ -38,32 +38,13 @@ function handleFormSubmit(event) {
   const title = titleInput.value
 
   if (title) {
-    let priority = handlePriority()
     addTask(title, priority)
     titleInput.value = ''
-    handlePriority()
     renderTodoList()
   }
 }
 
-function handlePriority() {
-  let priority = false
-  const priorityBtn = document.getElementById('important-btn')
-  priorityBtn.addEventListener('click', () => {
-    priority = !priority
-    console.log(priority)
-    if (priority) {
-      priorityBtn.classList.add('important-clicked')
-      priority = true
-    } else {
-      priorityBtn.classList.remove('important-clicked')
-      priority = false
-    }
-    return priority
-  })
-}
-
 const formElement = document.getElementById('form')
 formElement.addEventListener('submit', handleFormSubmit)
-handlePriority()
+
 export { renderTodoList }
