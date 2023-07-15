@@ -60,9 +60,9 @@ function handleFormSubmit(event) {
   const title = titleInput.value
 
   if (title) {
-    addTask(title)
+    addTask(title, false, 'All projects')
     titleInput.value = ''
-    renderTodoList(selectedProject)
+    renderTodoList('all')
   }
 }
 
