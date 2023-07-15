@@ -1,4 +1,4 @@
 import { initApp } from './modules/appController'
-import { getAllTasks } from './modules/appModel'
+import { getAllTasks, getAllProjects } from './modules/appModel'
 initApp()
 getAllTasks()
