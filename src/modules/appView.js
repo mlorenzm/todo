@@ -97,13 +97,11 @@ function renderProjectList(projects) {
 function handleFilterChange() {
   const filterSelect = document.getElementById('filter-select')
   const selectedProject = filterSelect.value
+  debugger
 
   // Call a function to filter tasks based on the selected project
   // Update the to-do list based on the filtered tasks
-
-  const filteredTasks = filterTasks(selectedProject)
-  console.log(filteredTasks)
-  renderTodoList(filteredTasks)
+  renderTodoList(selectedProject)
 }
 
 export { renderTodoList, renderProjectList }
