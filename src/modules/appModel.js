@@ -3,20 +3,24 @@
 let tasks = []
 let projects = []
 class Task {
-  constructor(title, priority, project) {
+  constructor(title, priority, project, dueDate) {
     this.title = title
     this.priority = priority
     this.project = project
+    this.dueDate = dueDate
   }
 }
-addTask('a', true, 'ayy')
-addTask('b', false, 'lmao')
+addTask('Walk the turtle', true, 'Personal', '25/03/2023')
+addTask('Go to cytometer', false, 'Laboratory', '02/12/2023')
+addTask('End thesis', true, 'Laboratory', '10/02/2024')
 
-function addTask(title, priority = false, project) {
-  const task = new Task(title, priority, project)
+function addTask(title, priority = false, project, dueDate) {
+  const task = new Task(title, priority, project, dueDate)
   tasks.push(task)
-  if (project != 'All projects') {
-    projects.push(task.project)
+  if (task.project != 'All projects') {
+    if (!projects.includes(task.project)) {
+      projects.push(task.project)
+    }
   }
 }
 

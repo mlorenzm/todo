@@ -18,9 +18,19 @@ function renderTodoList(selectedProject) {
     if (selectedProject === 'all' || task.project === selectedProject) {
       const taskElement = document.createElement('li')
       taskElement.classList.add('task-item-container')
-      taskElement.textContent = task.title + ' - ' + task.project
+      taskElement.textContent =
+        task.title + ' - ' + task.project + ' - ' + task.dueDate
+
+      const formattedDate = formatDate(task.dueDate)
+      const today = new Date()
+      console.log(formattedDate.toString(), today.toString())
+      console.log(formattedDate < today)
       if (task.priority) {
         taskElement.style.backgroundColor = '#ffbb01'
+      }
+
+      if (formattedDate < today) {
+        taskElement.style.backgroundColor = '#FF7272'
       }
       const buttonsContainer = document.createElement('div')
       buttonsContainer.classList.add('buttons-container')
@@ -42,7 +52,6 @@ function renderTodoList(selectedProject) {
       importantBtn.title = 'Mark as important'
       importantBtn.addEventListener('click', () => {
         toggleImportant(index)
-        console.log(getAllProjects())
         renderTodoList(selectedProject)
       })
 
@@ -55,7 +64,7 @@ function renderTodoList(selectedProject) {
 
 function handleFormSubmit(event) {
   event.preventDefault()
-  // Task title
+
   const titleInput = document.getElementById('input-container')
   const title = titleInput.value
 
@@ -64,7 +73,7 @@ function handleFormSubmit(event) {
     const dateRegex = /(\d{2}\/\d{2}\/\d{4})/
     let taskName = ''
     let project = ''
-    let date = ''
+    let dueDate = ''
 
     const taskMatch = title.match(/^([^#]+)/)
     if (taskMatch) {
@@ -81,9 +90,10 @@ function handleFormSubmit(event) {
     const dateMatch = title.match(dateRegex)
     if (dateMatch) {
       dueDate = dateMatch[1]
+      taskName = taskName.replace(dueDate, '').trim()
     }
 
-    addTask(taskName, false, project)
+    addTask(taskName, false, project, dueDate)
     renderProjectList(getAllProjects())
     titleInput.value = ''
     renderTodoList('all')
@@ -122,9 +132,17 @@ function handleFilterChange() {
   const filterSelect = document.getElementById('filter-select')
   const selectedProject = filterSelect.value
 
-  // Call a function to filter tasks based on the selected project
   // Update the to-do list based on the filtered tasks
   renderTodoList(selectedProject)
+}
+
+function formatDate(dateString) {
+  const parts = dateString.split('/')
+  const day = parseInt(parts[0], 10)
+  const month = parseInt(parts[1], 10) - 1
+  const year = parseInt(parts[2], 10)
+
+  return new Date(year, month, day)
 }
 
 export { renderTodoList, renderProjectList }
