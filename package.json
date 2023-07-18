@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mlorenzm/todo#readme",
   "dependencies": {
+    "date-fns": "^2.30.0",
     "webpack-cli": "^5.1.1"
   },
   "devDependencies": {
