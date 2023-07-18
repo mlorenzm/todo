@@ -60,7 +60,31 @@ function handleFormSubmit(event) {
   const title = titleInput.value
 
   if (title) {
-    addTask(title, false, 'All projects')
+    const projectRegex = /#(\w+)/
+    const dateRegex = /(\d{2}\/\d{2}\/\d{4})/
+    let taskName = ''
+    let project = ''
+    let date = ''
+
+    const taskMatch = title.match(/^([^#]+)/)
+    if (taskMatch) {
+      taskName = taskMatch[0].trim()
+    }
+
+    const projectMatch = title.match(projectRegex)
+    if (projectMatch) {
+      project = projectMatch[1]
+    } else {
+      project = 'All projects'
+    }
+
+    const dateMatch = title.match(dateRegex)
+    if (dateMatch) {
+      dueDate = dateMatch[1]
+    }
+
+    addTask(taskName, false, project)
+    renderProjectList(getAllProjects())
     titleInput.value = ''
     renderTodoList('all')
   }
@@ -97,7 +121,6 @@ function renderProjectList(projects) {
 function handleFilterChange() {
   const filterSelect = document.getElementById('filter-select')
   const selectedProject = filterSelect.value
-  debugger
 
   // Call a function to filter tasks based on the selected project
   // Update the to-do list based on the filtered tasks

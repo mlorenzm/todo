@@ -15,7 +15,9 @@ addTask('b', false, 'lmao')
 function addTask(title, priority = false, project) {
   const task = new Task(title, priority, project)
   tasks.push(task)
-  projects.push(task.project)
+  if (project != 'All projects') {
+    projects.push(task.project)
+  }
 }
 
 // Delete a task from the tasks array
