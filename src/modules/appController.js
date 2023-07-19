@@ -7,5 +7,4 @@ function initApp() {
   renderProjectList(getAllProjects())
 }
 
-// Export any necessary functions
 export { initApp }
